@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal FC | Victoria Concordia Crescit - สโมสรฟุตบอลอาร์เซนอล</title>
+    
+    <!-- Google Fonts: Prompt & Kanit สำหรับภาษาไทยที่ทันสมัยและคมชัด -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arsenal: {
+                            red: '#EF0107',
+                            darkRed: '#9C0004',
+                            gold: '#9C824A',
+                            lightGold: '#C5A866',
+                            navy: '#063672',
+                            darkNavy: '#031E42',
+                            slate: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                        display: ['Kanit', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'arsenal': '0 10px 30px -5px rgba(239, 1, 7, 0.25)',
+                        'gold': '0 10px 25px -5px rgba(156, 130, 74, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-arsenal-red selection:text-white overflow-x-hidden">
+
+    <!-- ==================== 1. HEADER & NAVIGATION MENU ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-arsenal-darkRed/95 backdrop-blur-md border-b border-arsenal-gold/30 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo & Name -->
+                <a href="#home" class="flex items-center space-x-3 group focus:outline-none">
+                    <!-- Custom SVG Arsenal-inspired Crest -->
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-arsenal-red to-arsenal-darkRed p-1 border-2 border-arsenal-gold shadow-md flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+                        <svg viewBox="0 0 100 115" class="w-9 h-9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 10 H90 V60 C90 88 50 108 50 108 C50 108 10 88 10 60 Z" fill="#EF0107" stroke="#9C824A" stroke-width="6"/>
+                            <path d="M50 10 H90 V60 C90 88 50 108 50 108 V10 Z" fill="#9C0004"/>
+                            <!-- Cannon Silhouette -->
+                            <rect x="28" y="54" width="44" height="10" rx="4" fill="#FFFFFF"/>
+                            <circle cx="42" cy="66" r="10" fill="#063672" stroke="#9C824A" stroke-width="3"/>
+                            <circle cx="42" cy="66" r="3" fill="#FFFFFF"/>
+                            <path d="M64 52 L76 49 L76 61 L64 58 Z" fill="#9C824A"/>
+                            <text x="50" y="36" text-anchor="middle" fill="#FFFFFF" font-family="Kanit, sans-serif" font-weight="800" font-size="16" letter-spacing="1">AFC</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-xl sm:text-2xl tracking-wide text-white block leading-none">ARSENAL FC</span>
+                        <span class="text-[11px] font-medium tracking-widest text-arsenal-lightGold uppercase block mt-0.5">The Gunners • Est. 1886</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#home" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white hover:bg-white/10 hover:text-arsenal-lightGold transition-colors">หน้าแรก</a>
+                    <a href="#history" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:text-arsenal-lightGold transition-colors">ประวัติสโมสร</a>
+                    <a href="#squad" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:text-arsenal-lightGold transition-colors">รายชื่อผู้เล่น</a>
+                    <a href="#honours" class="nav-link px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:bg-white/10 hover:text-arsenal-lightGold transition-colors">เกียรติประวัติและผลงาน</a>
+                    <a href="#contact" class="ml-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-arsenal-gold hover:bg-arsenal-lightGold text-slate-950 shadow-md transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-code mr-1.5"></i>ติดต่อผู้พัฒนา
+                    </a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="เปิดเมนูนำทาง" class="p-2.5 rounded-xl text-white hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-arsenal-gold transition">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-arsenal-darkRed border-t border-arsenal-gold/30 px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+            <a href="#home" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">
+                <i class="fa-solid fa-house w-6 text-arsenal-gold"></i> หน้าแรก
+            </a>
+            <a href="#history" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">
+                <i class="fa-solid fa-landmark w-6 text-arsenal-gold"></i> ประวัติสโมสร
+            </a>
+            <a href="#squad" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">
+                <i class="fa-solid fa-users w-6 text-arsenal-gold"></i> รายชื่อผู้เล่น
+            </a>
+            <a href="#honours" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-medium text-white hover:bg-white/10">
+                <i class="fa-solid fa-trophy w-6 text-arsenal-gold"></i> เกียรติประวัติและผลงาน
+            </a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-3 rounded-xl text-base font-semibold bg-arsenal-gold text-slate-950 mt-3 text-center">
+                <i class="fa-solid fa-envelope mr-2"></i> ติดต่อผู้พัฒนาเว็บไซต์
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="home" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 bg-gradient-to-br from-arsenal-darkRed via-arsenal-red to-arsenal-navy text-white overflow-hidden">
+        <!-- Decorative Background Patterns -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-arsenal-gold blur-3xl"></div>
+            <div class="absolute bottom-0 left-10 w-80 h-80 rounded-full bg-white blur-3xl"></div>
+            <div class="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:28px_28px]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-black/25 border border-arsenal-gold/50 backdrop-blur-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-arsenal-gold animate-pulse"></span>
+                        <span class="text-xs sm:text-sm font-semibold tracking-wider text-arsenal-lightGold uppercase">Victoria Concordia Crescit • ชัยชนะเกิดจากความสามัคคี</span>
+                    </div>
+
+                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight">
+                        ความภาคภูมิใจแห่ง <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-100 to-arsenal-lightGold">ลอนดอนเหนือ</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-white/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        ร่วมสำรวจเรื่องราวความยิ่งใหญ่กว่า 140 ปีของสโมสรฟุตบอลอาร์เซนอล ตั้งแต่จุดเริ่มต้นของคนงานโรงงานสรรพาวุธแห่งวูลวิช ตำนานไร้พ่าย "The Invincibles" สู่ยุคสมัยแห่งฟุตบอลเกมรุกอันเร้าใจในถิ่นเอมิเรตส์ สเตเดียม
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#history" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-arsenal-darkRed hover:bg-amber-50 font-display font-bold text-base shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                            <i class="fa-solid fa-book-open mr-2.5"></i> อ่านประวัติศาสตร์สโมสร
+                        </a>
+                        <a href="#squad" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-arsenal-navy/80 hover:bg-arsenal-navy text-white border border-arsenal-gold/60 font-display font-semibold text-base shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                            <i class="fa-solid fa-shirt mr-2.5 text-arsenal-lightGold"></i> ดูรายชื่อนักเตะชุดใหญ่
+                        </a>
+                    </div>
+
+                    <!-- Quick Key Facts -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/15 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-arsenal-lightGold">1886</div>
+                            <div class="text-xs text-white/75 mt-0.5">ปีที่ก่อตั้งสโมสร</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-white">13 สมัย</div>
+                            <div class="text-xs text-white/75 mt-0.5">แชมป์ลีกสูงสุดอังกฤษ</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-arsenal-lightGold">14 สมัย</div>
+                            <div class="text-xs text-white/75 mt-0.5">แชมป์เอฟเอ คัพ (สูงสุด)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Emblem Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm bg-white/10 backdrop-blur-md border border-arsenal-gold/40 rounded-3xl p-8 shadow-2xl text-center">
+                        <div class="w-36 h-36 mx-auto mb-5 rounded-full bg-gradient-to-b from-arsenal-red to-arsenal-darkRed p-3 border-4 border-arsenal-gold shadow-inner flex items-center justify-center">
+                            <svg viewBox="0 0 120 135" class="w-28 h-28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12 H108 V70 C108 104 60 126 60 126 C60 126 12 104 12 70 Z" fill="#EF0107" stroke="#9C824A" stroke-width="6"/>
+                                <path d="M60 12 H108 V70 C108 104 60 126 60 126 V12 Z" fill="#9C0004"/>
+                                <text x="60" y="45" text-anchor="middle" fill="#FFFFFF" font-family="Kanit, sans-serif" font-weight="800" font-size="20" letter-spacing="1.5">ARSENAL</text>
+                                <rect x="32" y="65" width="54" height="12" rx="5" fill="#FFFFFF"/>
+                                <circle cx="48" cy="79" r="12" fill="#063672" stroke="#9C824A" stroke-width="4"/>
+                                <circle cx="48" cy="79" r="3.5" fill="#FFFFFF"/>
+                                <path d="M78 63 L92 60 L92 73 L78 70 Z" fill="#9C824A"/>
+                            </svg>
+                        </div>
+                        <h2 class="font-display font-bold text-2xl text-white">Emirates Stadium</h2>
+                        <p class="text-sm text-arsenal-lightGold font-medium mt-1">Holloway, London • ความจุ 60,704 ที่นั่ง</p>
+                        <div class="mt-5 pt-5 border-t border-white/15 grid grid-cols-2 gap-3 text-left text-xs">
+                            <div class="bg-black/20 p-3 rounded-xl">
+                                <span class="text-white/60 block">ฉายาทีม</span>
+                                <span class="font-semibold text-white text-sm">เดอะ กันเนอร์ส (ปืนใหญ่)</span>
+                            </div>
+                            <div class="bg-black/20 p-3 rounded-xl">
+                                <span class="text-white/60 block">ผู้จัดการทีม</span>
+                                <span class="font-semibold text-white text-sm">มิเกล อาร์เตต้า</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. CLUB HISTORY SECTION ==================== -->
+    <section id="history" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-arsenal-red/10 text-arsenal-red font-semibold text-xs uppercase tracking-widest mb-3">
+                    Club Heritage & Timeline
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    ประวัติศาสตร์การก่อตั้งและตำนานสโมสร
+                </h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-arsenal-red to-arsenal-gold mx-auto rounded-full mt-4"></div>
+                <p class="text-slate-600 mt-4 text-sm sm:text-base leading-relaxed">
+                    จากทีมฟุตบอลสมัครเล่นของคนงานโรงงานผลิตอาวุธในลอนดอนใต้ สู่หนึ่งในสโมสรฟุตบอลที่ทรงอิทธิพลและมีเอกลักษณ์มากที่สุดในโลก คลิกปุ่ม <strong class="text-arsenal-red">"อ่านเพิ่มเติม"</strong> เพื่อเจาะลึกเรื่องราวในแต่ละยุคสมัย
+                </p>
+            </div>
+
+            <!-- History Era Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Era 1: 1886 Dial Square -->
+                <article class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-red to-arsenal-darkRed"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-navy text-white font-display font-bold text-xs">ค.ศ. 1886 - 1913</span>
+                                <i class="fa-solid fa-industry text-arsenal-gold text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                จุดกำเนิดในชื่อ "Dial Square"
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                ก่อตั้งขึ้นในเดือนตุลาคม ปี 1886 โดยกลุ่มคนงานโรงงานสรรพาวุธ Royal Arsenal ย่านวูลวิช นำโดย เดวิด แดนสกิน ก่อนเปลี่ยนชื่อเป็น Royal Arsenal และ Woolwich Arsenal ตามลำดับ และเป็นทีมแรกจากลอนดอนที่เข้าร่วมฟุตบอลลีกอังกฤษ
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era1')" class="w-full py-2.5 px-4 rounded-xl bg-white border border-arsenal-red/30 text-arsenal-red hover:bg-arsenal-red hover:text-white font-semibold text-sm transition-colors flex items-center justify-center">
+                            <span>อ่านเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Era 2: Highbury & Herbert Chapman -->
+                <article class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-gold to-amber-500"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-navy text-white font-display font-bold text-xs">ค.ศ. 1913 - 1939</span>
+                                <i class="fa-solid fa-landmark text-arsenal-gold text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                สู่สนามไฮบิวรี & ยุคทองเฮอร์เบิร์ต แชปแมน
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                ปี 1913 สโมสรย้ายข้ามแม่น้ำเทมส์สู่สนามไฮบิวรี (Highbury) ทางตอนเหนือของลอนดอน และในยุคของ เฮอร์เบิร์ต แชปแมน ผู้ปฏิวัติวงการฟุตบอลด้วยระบบ WM และเสื้อแขนขาวอันเป็นเอกลักษณ์ พาทีมคว้าแชมป์ลีกสูงสุดครั้งแรก
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era2')" class="w-full py-2.5 px-4 rounded-xl bg-white border border-arsenal-red/30 text-arsenal-red hover:bg-arsenal-red hover:text-white font-semibold text-sm transition-colors flex items-center justify-center">
+                            <span>อ่านเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Era 3: 1971 & 1989 Anfield Miracle -->
+                <article class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-navy to-blue-700"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-navy text-white font-display font-bold text-xs">ค.ศ. 1970 - 1995</span>
+                                <i class="fa-solid fa-shield-halved text-arsenal-gold text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                ดับเบิลแชมป์ 1971 และปาฏิหาริย์แอนฟิลด์ '89
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                เบอร์ตี มี พาอาร์เซนอลคว้าดับเบิลแชมป์ (ลีก + เอฟเอคัพ) ครั้งแรกในปี 1971 ต่อด้วยยุคของ จอร์จ เกรแฮม กับตำนานค่ำคืนประวัติศาสตร์ที่บุกชนะลิเวอร์พูล 2-0 ถึงแอนฟิลด์ในนาทีสุดท้าย คว้าแชมป์ลีกปี 1989 อย่างเหลือเชื่อ
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era3')" class="w-full py-2.5 px-4 rounded-xl bg-white border border-arsenal-red/30 text-arsenal-red hover:bg-arsenal-red hover:text-white font-semibold text-sm transition-colors flex items-center justify-center">
+                            <span>อ่านเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Era 4: Arsene Wenger & The Invincibles -->
+                <article class="group bg-slate-50 rounded-2xl border-2 border-arsenal-gold/50 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-gold via-yellow-400 to-arsenal-gold"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-gold text-slate-950 font-display font-bold text-xs">ค.ศ. 1996 - 2018</span>
+                                <i class="fa-solid fa-crown text-arsenal-gold text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                ยุค อาร์แซน เวนเกอร์ & แชมป์ไร้พ่าย (The Invincibles)
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                อาร์แซน เวนเกอร์ ยกระดับสโมสรด้วยฟุตบอลสวยงามและทันสมัย สร้างประวัติศาสตร์หน้าสำคัญในฤดูกาล 2003-04 ด้วยการคว้าแชมป์พรีเมียร์ลีกแบบ "ไร้พ่าย" ตลอด 38 นัด รับถ้วยพรีเมียร์ลีกทองคำเพียงใบเดียวในประวัติศาสตร์
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era4')" class="w-full py-2.5 px-4 rounded-xl bg-arsenal-gold text-slate-950 hover:bg-arsenal-lightGold font-bold text-sm transition-colors flex items-center justify-center shadow-sm">
+                            <span>อ่านตำนานไร้พ่ายเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Era 5: Emirates Stadium Transition -->
+                <article class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-red to-arsenal-navy"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-navy text-white font-display font-bold text-xs">ค.ศ. 2006 - 2019</span>
+                                <i class="fa-solid fa-building-columns text-arsenal-gold text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                รังเหย้าแห่งใหม่ เอมิเรตส์ สเตเดียม
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                สโมสรอำลาสนามไฮบิวรีที่อยู่คู่กันมานาน 93 ปี เพื่อย้ายเข้าสู่เอมิเรตส์ สเตเดียม ความจุกว่า 60,000 ที่นั่ง แม้ต้องเผชิญข้อจำกัดทางการเงินจากการสร้างสนาม แต่ยังคงรักษาคุณภาพและคว้าแชมป์เอฟเอ คัพ ได้อย่างต่อเนื่อง
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era5')" class="w-full py-2.5 px-4 rounded-xl bg-white border border-arsenal-red/30 text-arsenal-red hover:bg-arsenal-red hover:text-white font-semibold text-sm transition-colors flex items-center justify-center">
+                            <span>อ่านเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Era 6: Mikel Arteta Era -->
+                <article class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="h-3 bg-gradient-to-r from-arsenal-red to-rose-600"></div>
+                        <div class="p-6 sm:p-7">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-lg bg-arsenal-red text-white font-display font-bold text-xs">ค.ศ. 2019 - ปัจจุบัน</span>
+                                <i class="fa-solid fa-fire text-arsenal-red text-xl"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-xl text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                การฟื้นคืนชีพยุค มิเกล อาร์เตต้า
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                อดีตกัปตันทีม มิเกล อาร์เตต้า กลับมาปลุกจิตวิญญาณปืนใหญ่ คว้าแชมป์เอฟเอ คัพ 2020 และสร้างขุมกำลังสายเลือดใหม่นำโดย บูกาโย ซาก้า, มาร์ติน โอเดการ์ด และ เดแคลน ไรซ์ กลับสู่เวทียูฟ่า แชมเปียนส์ลีก และลุ้นแชมป์เต็มตัว
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openHistoryModal('era6')" class="w-full py-2.5 px-4 rounded-xl bg-white border border-arsenal-red/30 text-arsenal-red hover:bg-arsenal-red hover:text-white font-semibold text-sm transition-colors flex items-center justify-center">
+                            <span>อ่านเพิ่มเติม</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. FIRST TEAM SQUAD SECTION ==================== -->
+    <section id="squad" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-arsenal-navy/10 text-arsenal-navy font-semibold text-xs uppercase tracking-widest mb-3">
+                    Men's First Team
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    รายชื่อนักเตะชุดใหญ่ (First Team Squad)
+                </h2>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-arsenal-red to-arsenal-navy mx-auto rounded-full mt-4"></div>
+                <p class="text-slate-600 mt-4 text-sm sm:text-base">
+                    เลือกกรองรายชื่อนักเตะตามตำแหน่ง และคลิกที่การ์ดหรือปุ่ม <strong class="text-arsenal-navy">"ดูข้อมูลเพิ่มเติม"</strong> เพื่อดูประวัติและสถิติย่อของนักเตะแต่ละคน
+                </p>
+            </div>
+
+            <!-- Position Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" role="tablist" aria-label="ตัวกรองตำแหน่งนักเตะ">
+                <button onclick="filterSquad('ALL')" data-filter="ALL" class="filter-btn active px-5 py-2.5 rounded-xl font-display font-semibold text-sm bg-arsenal-red text-white shadow-md transition-all">
+                    ทั้งหมด (12)
+                </button>
+                <button onclick="filterSquad('GK')" data-filter="GK" class="filter-btn px-5 py-2.5 rounded-xl font-display font-semibold text-sm bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    ผู้รักษาประตู (GK)
+                </button>
+                <button onclick="filterSquad('DEF')" data-filter="DEF" class="filter-btn px-5 py-2.5 rounded-xl font-display font-semibold text-sm bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    กองหลัง (DEF)
+                </button>
+                <button onclick="filterSquad('MID')" data-filter="MID" class="filter-btn px-5 py-2.5 rounded-xl font-display font-semibold text-sm bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    กองกลาง (MID)
+                </button>
+                <button onclick="filterSquad('FWD')" data-filter="FWD" class="filter-btn px-5 py-2.5 rounded-xl font-display font-semibold text-sm bg-white text-slate-700 hover:bg-slate-200 border border-slate-300 transition-all">
+                    กองหน้า (FWD)
+                </button>
+            </div>
+
+            <!-- Players Grid (Rendered dynamically via JS for clean filtering & modal trigger) -->
+            <div id="players-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Player cards will be injected here by JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 5. HONOURS & ACHIEVEMENTS SECTION ==================== -->
+    <section id="honours" class="py-20 bg-arsenal-darkNavy text-white relative overflow-hidden">
+        <!-- Decorative Accent -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-arsenal-red/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-arsenal-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-arsenal-gold/20 border border-arsenal-gold/40 text-arsenal-lightGold font-semibold text-xs uppercase tracking-widest mb-3">
+                    Trophy Cabinet
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    เกียรติประวัติและผลงานความสำเร็จ
+                </h2>
+                <div class="w-20 h-1.5 bg-arsenal-gold mx-auto rounded-full mt-4"></div>
+                <p class="text-slate-300 mt-4 text-sm sm:text-base">
+                    ทำเนียบแชมป์อย่างเป็นทางการของสโมสรฟุตบอลอาร์เซนอลตั้งแต่อดีตจนถึงปัจจุบัน คลิกดูรายละเอียดปีที่คว้าแชมป์ได้ในแต่ละรายการ
+                </p>
+            </div>
+
+            <!-- Trophy Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                
+                <!-- Trophy 1: League Titles -->
+                <div class="bg-white/5 backdrop-blur-md border border-arsenal-gold/40 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-arsenal-gold to-amber-600 flex items-center justify-center text-slate-950 text-2xl shadow-lg">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-arsenal-lightGold">13</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">แชมป์ลีกสูงสุดอังกฤษ</h3>
+                    <p class="text-xs text-arsenal-lightGold font-medium mt-1">First Division & Premier League</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        คว้าแชมป์ลีกสูงสุด 13 สมัย รวมถึงสถิติอันเป็นอมตะ "แชมป์ไร้พ่าย" ในฤดูกาล 2003-04
+                    </p>
+                    <button onclick="openTrophyModal('league')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-arsenal-gold/20 hover:bg-arsenal-gold text-arsenal-lightGold hover:text-slate-950 border border-arsenal-gold/40 font-semibold text-xs transition-colors">
+                        ดูทำเนียบปีที่คว้าแชมป์ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trophy 2: FA Cup -->
+                <div class="bg-white/5 backdrop-blur-md border border-arsenal-red/50 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-arsenal-red to-arsenal-darkRed flex items-center justify-center text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-white">14</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">เอฟเอ คัพ (FA Cup)</h3>
+                    <p class="text-xs text-rose-300 font-medium mt-1">เจ้าของสถิติแชมป์สูงสุดตลอดกาล</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        อาร์เซนอลคือราชาแห่งถ้วยน็อกเอาต์ที่เก่าแก่ที่สุดในโลก ครองสถิติสูงสุด 14 สมัย
+                    </p>
+                    <button onclick="openTrophyModal('facup')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-arsenal-red/20 hover:bg-arsenal-red text-white border border-arsenal-red/50 font-semibold text-xs transition-colors">
+                        ดูทำเนียบปีที่คว้าแชมป์ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trophy 3: Community Shield -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-400 flex items-center justify-center text-slate-900 text-2xl shadow-lg">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-white">17</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">เอฟเอ คอมมูนิตี้ ชิลด์</h3>
+                    <p class="text-xs text-slate-300 font-medium mt-1">FA Community Shield / Charity Shield</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        คว้าโล่การกุศลเปิดฤดูกาลรวม 17 สมัย ล่าสุดในปี 2023 ด้วยการเอาชนะแมนเชสเตอร์ ซิตี้
+                    </p>
+                    <button onclick="openTrophyModal('shield')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white hover:text-slate-900 text-white border border-white/20 font-semibold text-xs transition-colors">
+                        ดูทำเนียบปีที่คว้าแชมป์ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trophy 4: League Cup -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-arsenal-navy flex items-center justify-center text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-white">2</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">ฟุตบอลลีก คัพ (League Cup)</h3>
+                    <p class="text-xs text-blue-300 font-medium mt-1">EFL Cup / Coca-Cola Cup</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        คว้าแชมป์ลีกคัพ 2 สมัย ในปี 1987 และปี 1993 ซึ่งในปี 1993 สร้างประวัติศาสตร์คว้าดับเบิลแชมป์บอลถ้วยในประเทศ
+                    </p>
+                    <button onclick="openTrophyModal('leaguecup')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white hover:text-slate-900 text-white border border-white/20 font-semibold text-xs transition-colors">
+                        ดูทำเนียบปีที่คว้าแชมป์ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trophy 5: European Cup Winners' Cup -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-earth-europe"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-white">1</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">ยูโรเปียน คัพ วินเนอร์ส คัพ</h3>
+                    <p class="text-xs text-emerald-300 font-medium mt-1">European Cup Winners' Cup (1993-94)</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        คว้าแชมป์ระดับทวีปยุโรปสมัยที่สองของสโมสร ด้วยชัยชนะเหนือปาร์มา 1-0 ที่กรุงโคเปนเฮเกน
+                    </p>
+                    <button onclick="openTrophyModal('europe')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white hover:text-slate-900 text-white border border-white/20 font-semibold text-xs transition-colors">
+                        ดูรายละเอียดความสำเร็จ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Trophy 6: Inter-Cities Fairs Cup -->
+                <div class="bg-white/5 backdrop-blur-md border border-white/15 rounded-2xl p-6 hover:bg-white/10 transition-all group">
+                    <div class="flex items-start justify-between">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-4xl text-white">1</span>
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mt-5">อินเตอร์-ซิตีส์ แฟร์ส คัพ</h3>
+                    <p class="text-xs text-amber-300 font-medium mt-1">Inter-Cities Fairs Cup (1969-70)</p>
+                    <p class="text-sm text-slate-300 mt-3 leading-relaxed">
+                        แชมป์ยุโรปรายการแรกของอาร์เซนอล หลังพลิกสถานการณ์ชนะอันเดอร์เลชท์ 3-0 ในนัดชิงชนะเลิศเลกสอง
+                    </p>
+                    <button onclick="openTrophyModal('fairs')" class="mt-5 w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white hover:text-slate-900 text-white border border-white/20 font-semibold text-xs transition-colors">
+                        ดูรายละเอียดความสำเร็จ <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Milestone Timeline Strip -->
+            <div class="bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8">
+                <h3 class="font-display font-bold text-xl text-arsenal-lightGold mb-6 flex items-center">
+                    <i class="fa-solid fa-timeline mr-3"></i> เส้นทางเหตุการณ์สำคัญระดับตำนาน (Key Milestones)
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="border-l-2 border-arsenal-gold pl-4">
+                        <span class="text-xs font-bold text-arsenal-lightGold">1930 - 1938</span>
+                        <h4 class="font-display font-bold text-base text-white mt-1">แชมป์ลีก 5 สมัยใน 8 ปี</h4>
+                        <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">ยุคแห่งความยิ่งใหญ่ช่วงทศวรรษ 1930 สร้างชื่อเสียงให้อาร์เซนอลเป็นมหาอำนาจลูกหนังอังกฤษ</p>
+                    </div>
+                    <div class="border-l-2 border-arsenal-red pl-4">
+                        <span class="text-xs font-bold text-rose-400">1970 - 1971</span>
+                        <h4 class="font-display font-bold text-base text-white mt-1">ดับเบิลแชมป์ประวัติศาสตร์</h4>
+                        <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">คว้าแชมป์ดิวิชัน 1 และเอฟเอ คัพ ในฤดูกาลเดียวกันได้สำเร็จเป็นครั้งแรกของสโมสร</p>
+                    </div>
+                    <div class="border-l-2 border-arsenal-gold pl-4">
+                        <span class="text-xs font-bold text-arsenal-lightGold">2003 - 2004</span>
+                        <h4 class="font-display font-bold text-base text-white mt-1">49 นัดไร้พ่าย (The Invincibles)</h4>
+                        <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">ชนะ 26 เสมอ 12 แพ้ 0 คว้าแชมป์พรีเมียร์ลีกไร้พ่าย และยืดสถิติไม่แพ้ใครในลีกยาวนานถึง 49 นัด</p>
+                    </div>
+                    <div class="border-l-2 border-blue-400 pl-4">
+                        <span class="text-xs font-bold text-blue-300">2020 - ปัจจุบัน</span>
+                        <h4 class="font-display font-bold text-base text-white mt-1">สถิติเอฟเอ คัพ 14 สมัย & ยุคใหม่</h4>
+                        <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">ครองตำแหน่งเจ้าพ่อเอฟเอ คัพ สูงสุด 14 สมัย และกลับมาท้าทายความสำเร็จทั้งในอังกฤษและยุโรป</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT DEVELOPER SECTION ==================== -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Developer Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-arsenal-red/10 text-arsenal-red font-semibold text-xs uppercase tracking-widest">
+                        Web Developer & UX/UI Designer
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                        ติดต่อผู้พัฒนาเว็บไซต์
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        เว็บไซต์นี้ได้รับการออกแบบและพัฒนาขึ้นตามหลักการออกแบบเว็บสมัยใหม่ (Responsive Web Design & UX/UI Principles) เพื่อถ่ายทอดความงดงามและจิตวิญญาณของสโมสรอาร์เซนอล หากมีข้อเสนอแนะ ติดต่อพูดคุย หรือสนใจร่วมงานพัฒนาเว็บไซต์ สามารถส่งข้อความถึงผู้พัฒนาได้ทันที
+                    </p>
+
+                    <!-- Developer Profile Card -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4 shadow-sm">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-arsenal-red to-arsenal-navy text-white flex items-center justify-center font-display font-bold text-xl shadow-md">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-lg text-slate-900">ทีมพัฒนา Gooner Web Studio</h3>
+                                <p class="text-xs text-arsenal-red font-semibold">Frontend Developer & UI Specialist</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-3 border-t border-slate-200 text-sm">
+                            <div class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-envelope w-6 text-arsenal-red"></i>
+                                <span>developer@arsenal-fanhub.example.com</span>
+                            </div>
+                            <div class="flex items-center text-slate-700">
+                                <i class="fa-brands fa-github w-6 text-arsenal-navy"></i>
+                                <span>github.com/gooner-web-studio</span>
+                            </div>
+                            <div class="flex items-center text-slate-700">
+                                <i class="fa-solid fa-location-dot w-6 text-arsenal-gold"></i>
+                                <span>Bangkok / Lampang, Thailand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg">
+                        <h3 class="font-display font-bold text-2xl text-slate-900 mb-2">ส่งข้อความถึงผู้พัฒนา</h3>
+                        <p class="text-sm text-slate-500 mb-6">กรอกข้อมูลด้านล่าง ระบบจะแสดงการยืนยันการส่งข้อความทันที</p>
+
+                        <form id="contact-form" class="space-y-5" novalidate>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="sender-name" class="block text-sm font-semibold text-slate-700 mb-1.5">ชื่อ-นามสกุล <span class="text-arsenal-red">*</span></label>
+                                    <input type="text" id="sender-name" required placeholder="เช่น ธนากร กันเนอร์ส"
+                                        class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-arsenal-red focus:ring-2 focus:ring-arsenal-red/20 transition">
+                                </div>
+                                <div>
+                                    <label for="sender-email" class="block text-sm font-semibold text-slate-700 mb-1.5">อีเมลติดต่อกลับ <span class="text-arsenal-red">*</span></label>
+                                    <input type="email" id="sender-email" required placeholder="name@example.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-arsenal-red focus:ring-2 focus:ring-arsenal-red/20 transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="contact-topic" class="block text-sm font-semibold text-slate-700 mb-1.5">หัวข้อที่ต้องการติดต่อ</label>
+                                <select id="contact-topic"
+                                    class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-arsenal-red focus:ring-2 focus:ring-arsenal-red/20 transition">
+                                    <option value="feedback">ข้อเสนอแนะเกี่ยวกับการออกแบบเว็บไซต์ (UX/UI)</option>
+                                    <option value="data">แจ้งอัปเดตข้อมูลนักเตะ / สถิติสโมสร</option>
+                                    <option value="project">ติดต่องานพัฒนาเว็บไซต์</option>
+                                    <option value="other">พูดคุยแลกเปลี่ยนประสาแฟนบอลปืนใหญ่</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="sender-message" class="block text-sm font-semibold text-slate-700 mb-1.5">ข้อความของคุณ <span class="text-arsenal-red">*</span></label>
+                                <textarea id="sender-message" rows="4" required placeholder="พิมพ์ข้อความหรือข้อเสนอแนะของคุณที่นี่..."
+                                    class="w-full px-4 py-3 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:outline-none focus:border-arsenal-red focus:ring-2 focus:ring-arsenal-red/20 transition"></textarea>
+                            </div>
+
+                            <!-- Inline Status Message Box (No alert() used!) -->
+                            <div id="form-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                            <button type="submit"
+                                class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-arsenal-red to-arsenal-darkRed hover:from-arsenal-darkRed hover:to-arsenal-red text-white font-display font-bold text-base shadow-arsenal transition-all transform hover:-translate-y-0.5 flex items-center justify-center">
+                                <i class="fa-solid fa-paper-plane mr-2.5"></i> ส่งข้อความถึงผู้พัฒนา
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. FOOTER ==================== -->
+    <footer class="bg-slate-950 text-slate-300 border-t-4 border-arsenal-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-slate-800">
+                
+                <!-- Brand Col -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-lg bg-arsenal-red flex items-center justify-center text-white font-display font-extrabold border border-arsenal-gold">
+                            AFC
+                        </div>
+                        <span class="font-display font-bold text-xl text-white">ARSENAL FC FAN HUB</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        เว็บไซต์รวบรวมประวัติศาสตร์ รายชื่อผู้เล่นชุดใหญ่ และทำเนียบความสำเร็จของสโมสรฟุตบอลอาร์เซนอล พัฒนาด้วยมาตรฐาน HTML5, Tailwind CSS และ Vanilla JavaScript
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">เมนูลัด</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#home" class="hover:text-arsenal-lightGold transition-colors">หน้าแรก (Home)</a></li>
+                        <li><a href="#history" class="hover:text-arsenal-lightGold transition-colors">ประวัติการก่อตั้งสโมสร (History)</a></li>
+                        <li><a href="#squad" class="hover:text-arsenal-lightGold transition-colors">รายชื่อนักเตะชุดใหญ่ (First Team)</a></li>
+                        <li><a href="#honours" class="hover:text-arsenal-lightGold transition-colors">เกียรติประวัติและถ้วยรางวัล (Honours)</a></li>
+                        <li><a href="#contact" class="hover:text-arsenal-lightGold transition-colors">ติดต่อผู้พัฒนาเว็บไซต์ (Contact Dev)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Club Motto & Social -->
+                <div>
+                    <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider mb-4">คำขวัญประจำสโมสร</h4>
+                    <blockquote class="p-4 rounded-xl bg-white/5 border-l-4 border-arsenal-gold">
+                        <p class="font-display font-bold text-arsenal-lightGold italic">"Victoria Concordia Crescit"</p>
+                        <p class="text-xs text-slate-400 mt-1">ชัยชนะเกิดจากความสามัคคี (Victory Through Harmony)</p>
+                    </blockquote>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Arsenal FC Fan Tribute & UX/UI Showcase. All rights reserved.</p>
+                <p>ออกแบบและพัฒนาด้วยโทนสีประจำสโมสรอาร์เซนอล (#EF0107 • #9C824A • #063672)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== INTERACTIVE MODAL SYSTEM (History, Player & Trophy Details) ==================== -->
+    <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl border border-slate-200 flex flex-col animate-[fadeIn_0.2s_ease-out]">
+            
+            <!-- Modal Header -->
+            <div id="modal-header-bg" class="px-6 py-5 bg-gradient-to-r from-arsenal-red to-arsenal-darkRed text-white flex items-center justify-between">
+                <div>
+                    <span id="modal-badge" class="inline-block px-2.5 py-0.5 rounded-md bg-black/25 text-arsenal-lightGold text-xs font-semibold mb-1">รายละเอียด</span>
+                    <h3 id="modal-title" class="font-display font-bold text-xl sm:text-2xl leading-snug">หัวข้อรายละเอียด</h3>
+                </div>
+                <button onclick="closeModal()" aria-label="ปิดหน้าต่าง" class="w-10 h-10 rounded-xl bg-white/15 hover:bg-white/25 text-white flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body (Scrollable) -->
+            <div id="modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+                <!-- Content injected dynamically -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-arsenal-red text-white font-semibold text-sm transition-colors">
+                    ปิดหน้าต่าง
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. First Team Players Database
+        const playersData = [
+            {
+                id: 1,
+                number: 22,
+                name: "David Raya",
+                thaiName: "ดาบิด รายา",
+                position: "GK",
+                posLabel: "ผู้รักษาประตู",
+                nationality: "สเปน",
+                age: 30,
+                joined: "2023",
+                highlight: "เจ้าของรางวัลถุงมือทองคำพรีเมียร์ลีก (Golden Glove) โดดเด่นเรื่องการเปิดบอลยาวที่แม่นยำและการตัดลูกกลางอากาศ",
+                stats: { apps: "95+", cleanSheets: "42", honours: "Premier League Golden Glove" }
+            },
+            {
+                id: 2,
+                number: 2,
+                name: "William Saliba",
+                thaiName: "วิลเลียม ซาลิบา",
+                position: "DEF",
+                posLabel: "กองหลัง (เซ็นเตอร์แบ็ก)",
+                nationality: "ฝรั่งเศส",
+                age: 25,
+                joined: "2019",
+                highlight: "หัวใจสำคัญในแนวรับที่แข็งแกร่งเยือกเย็น อ่านเกมเฉียบขาด และมีความเร็วในการดวลตัวต่อตัวระดับโลก",
+                stats: { apps: "110+", cleanSheets: "48", honours: "PFA Team of the Year" }
+            },
+            {
+                id: 3,
+                number: 6,
+                name: "Gabriel Magalhães",
+                thaiName: "กาเบรียล มากัลเญส",
+                position: "DEF",
+                posLabel: "กองหลัง (เซ็นเตอร์แบ็ก)",
+                nationality: "บราซิล",
+                age: 28,
+                joined: "2020",
+                highlight: "ปราการหลังจอมแกร่งที่จับคู่กับซาลิบาได้อย่างลงตัว พร้อมทีเด็ดลูกโหม่งทำประตูจากลูกตั้งเตะ",
+                stats: { apps: "185+", goals: "18", honours: "Community Shield 2023" }
+            },
+            {
+                id: 4,
+                number: 4,
+                name: "Ben White",
+                thaiName: "เบน ไวท์",
+                position: "DEF",
+                posLabel: "กองหลัง (แบ็กขวา / เซ็นเตอร์)",
+                nationality: "อังกฤษ",
+                age: 28,
+                joined: "2021",
+                highlight: "กองหลังสารพัดประโยชน์ที่มีความฟิตสูง เติมเกมรุกประสานงานกับซาก้าทางฝั่งขวาได้อย่างยอดเยี่ยม",
+                stats: { apps: "145+", assists: "12", honours: "Community Shield 2023" }
+            },
+            {
+                id: 5,
+                number: 12,
+                name: "Jurriën Timber",
+                thaiName: "เยอร์เรียน ทิมเบอร์",
+                position: "DEF",
+                posLabel: "กองหลัง (ฟูลแบ็ก / เซ็นเตอร์)",
+                nationality: "เนเธอร์แลนด์",
+                age: 25,
+                joined: "2023",
+                highlight: "กองหลังสมัยใหม่ที่เล่นได้ทั้งแบ็กซ้าย แบ็กขวา และอินเวิร์ตฟูลแบ็ก ครองบอลเหนียวแน่นและแย่งบอลดุดัน",
+                stats: { apps: "55+", passAcc: "91%", honours: "Community Shield 2023" }
+            },
+            {
+                id: 6,
+                number: 8,
+                name: "Martin Ødegaard",
+                thaiName: "มาร์ติน โอเดการ์ด (กัปตันทีม)",
+                position: "MID",
+                posLabel: "กองกลางตัวรุก",
+                nationality: "นอร์เวย์",
+                age: 27,
+                joined: "2021",
+                highlight: "กัปตันทีมผู้นำการเพรสซิ่งและสร้างสรรค์เกมรุก ด้วยวิสัยทัศน์การจ่ายบอลทะลุช่องและการยิงไกลด้วยซ้าย",
+                stats: { apps: "170+", goals: "38", honours: "Arsenal Player of the Season (2x)" }
+            },
+            {
+                id: 7,
+                number: 41,
+                name: "Declan Rice",
+                thaiName: "เดแคลน ไรซ์",
+                position: "MID",
+                posLabel: "กองกลางตัวรับ / บ็อกซ์ทูบ็อกซ์",
+                nationality: "อังกฤษ",
+                age: 27,
+                joined: "2023",
+                highlight: "มิดฟิลด์ค่าตัวสถิติสโมสรที่ยกระดับแดนกลางด้วยพละกำลัง การตัดเกม และลูกยิงสำคัญในนาทีบาป",
+                stats: { apps: "95+", goals: "14", honours: "PFA Team of the Year" }
+            },
+            {
+                id: 8,
+                number: 23,
+                name: "Mikel Merino",
+                thaiName: "มิเกล เมริโน",
+                position: "MID",
+                posLabel: "กองกลาง",
+                nationality: "สเปน",
+                age: 30,
+                joined: "2024",
+                highlight: "มิดฟิลด์แชมป์ยูโร 2024 ผู้เชี่ยวชาญการดวลลูกกลางอากาศและการสอดขึ้นไปจบสกอร์ในกรอบเขตโทษ",
+                stats: { apps: "45+", duelsWon: "64%", honours: "UEFA Euro 2024 Winner" }
+            },
+            {
+                id: 9,
+                number: 7,
+                name: "Bukayo Saka",
+                thaiName: "บูกาโย ซาก้า (Starboy)",
+                position: "FWD",
+                posLabel: "ปีกขวา / กองหน้า",
+                nationality: "อังกฤษ",
+                age: 25,
+                joined: "ผลผลิตจากอะคาเดมี Hale End",
+                highlight: "เพชรเม็ดงามจากอะคาเดมี Hale End ผู้แบกความหวังเกมรุก ด้วยการเลี้ยงกินตัว ตัดเข้าในยิง และแอสซิสต์อย่างสม่ำเสมอ",
+                stats: { apps: "245+", goals: "65+", honours: "PFA Young Player of the Year" }
+            },
+            {
+                id: 10,
+                number: 29,
+                name: "Kai Havertz",
+                thaiName: "ไค ฮาแวร์ตซ์",
+                position: "FWD",
+                posLabel: "กองหน้าตัวเป้า / กองกลางตัวรุก",
+                nationality: "เยอรมนี",
+                age: 27,
+                joined: "2023",
+                highlight: "ศูนย์หน้าตัวเชื่อมเกมที่ขยันวิ่งหาพื้นที่ ชนะลูกกลางอากาศ และยิงประตูสำคัญให้ทีมได้อย่างต่อเนื่อง",
+                stats: { apps: "90+", goals: "28", honours: "Community Shield 2023" }
+            },
+            {
+                id: 11,
+                number: 11,
+                name: "Gabriel Martinelli",
+                thaiName: "กาเบรียล มาร์ติเนลลี",
+                position: "FWD",
+                posLabel: "ปีกซ้าย",
+                nationality: "บราซิล",
+                age: 25,
+                joined: "2019",
+                highlight: "ปีกความเร็วสูงจอมขยันที่เป็นฝันร้ายของแนวรับคู่แข่งในจังหวะสวนกลับและการวิ่งกดดันแดนบน",
+                stats: { apps: "195+", goals: "46", honours: "FA Cup 2020 Winner" }
+            },
+            {
+                id: 12,
+                number: 19,
+                name: "Leandro Trossard",
+                thaiName: "เลอันโดร ทรอสซาร์",
+                position: "FWD",
+                posLabel: "กองหน้า / ปีกซ้าย",
+                nationality: "เบลเยียม",
+                age: 31,
+                joined: "2023",
+                highlight: "ตัวรุกจอมเทคนิคที่จบสกอร์ได้คมกริบทั้งสองเท้า มักลงมาเปลี่ยนเกมและยิงประตูสำคัญได้เสมอ",
+                stats: { apps: "95+", goals: "25", honours: "Community Shield 2023" }
+            }
+        ];
+
+        // Render Squad Cards
+        const playersGrid = document.getElementById('players-grid');
+
+        function renderPlayers(filter = 'ALL') {
+            playersGrid.innerHTML = '';
+            const filtered = filter === 'ALL' ? playersData : playersData.filter(p => p.position === filter);
+
+            filtered.forEach(player => {
+                const posColors = {
+                    'GK': 'bg-amber-500 text-slate-950',
+                    'DEF': 'bg-arsenal-navy text-white',
+                    'MID': 'bg-arsenal-red text-white',
+                    'FWD': 'bg-emerald-600 text-white'
+                };
+
+                const card = document.createElement('div');
+                card.className = "group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <!-- Jersey Header Banner -->
+                        <div class="relative h-28 bg-gradient-to-br from-arsenal-red via-arsenal-darkRed to-arsenal-navy p-5 flex items-center justify-between overflow-hidden">
+                            <span class="absolute -right-3 -bottom-6 font-display font-extrabold text-8xl text-white/15 select-none group-hover:scale-110 transition-transform">
+                                ${player.number}
+                            </span>
+                            <div class="relative z-10">
+                                <span class="inline-block px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wider ${posColors[player.position]}">
+                                    ${player.position}
+                                </span>
+                                <div class="text-white/80 text-xs mt-1.5 font-medium">
+                                    <i class="fa-solid fa-flag mr-1 text-arsenal-lightGold"></i> ${player.nationality}
+                                </div>
+                            </div>
+                            <div class="relative z-10 w-12 h-12 rounded-xl bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center font-display font-extrabold text-xl text-white">
+                                #${player.number}
+                            </div>
+                        </div>
+
+                        <!-- Player Info -->
+                        <div class="p-5">
+                            <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-arsenal-red transition-colors">
+                                ${player.name}
+                            </h3>
+                            <p class="text-xs font-medium text-slate-500 mt-0.5">${player.thaiName}</p>
+                            <p class="text-xs text-arsenal-navy font-semibold mt-2">${player.posLabel}</p>
+                        </div>
+                    </div>
+
+                    <div class="px-5 pb-5">
+                        <button onclick="openPlayerModal(${player.id})"
+                            class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-arsenal-navy text-slate-800 hover:text-white font-semibold text-xs transition-colors flex items-center justify-center">
+                            <i class="fa-solid fa-id-card mr-2"></i> ดูข้อมูลเพิ่มเติม
+                        </button>
+                    </div>
+                `;
+                playersGrid.appendChild(card);
+            });
+        }
+
+        // Filter Handler
+        function filterSquad(position) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === position) {
+                    btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+                    btn.classList.add('bg-arsenal-red', 'text-white', 'shadow-md');
+                } else {
+                    btn.classList.remove('bg-arsenal-red', 'text-white', 'shadow-md');
+                    btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-300');
+                }
+            });
+            renderPlayers(position);
+        }
+
+        // Initial Render
+        renderPlayers('ALL');
+
+        // 3. Detailed Modal Content Data (History & Trophies)
+        const historyDetails = {
+            era1: {
+                badge: "ค.ศ. 1886 - 1913",
+                title: "จุดกำเนิดในชื่อ Dial Square แห่งวูลวิช",
+                content: `
+                    <p>เรื่องราวของอาร์เซนอลเริ่มต้นขึ้นในช่วงปลายปี ค.ศ. 1886 เมื่อกลุ่มคนงานจากโรงงานผลิตอาวุธ <strong>Royal Arsenal</strong> ในย่านวูลวิช (Woolwich) ทางตะวันออกเฉียงใต้ของกรุงลอนดอน นำโดย <strong>เดวิด แดนสกิน (David Danskin)</strong> ชาวสกอตแลนด์ และ <strong>แจ็ค ฮัมเบิล</strong> ได้รวมตัวกันก่อตั้งทีมฟุตบอลในชื่อ <strong>"Dial Square"</strong></p>
+                    <p>นัดแรกของสโมสรเกิดขึ้นเมื่อวันที่ 11 ธันวาคม 1886 โดยเอาชนะทีม Eastern Wanderers ไปได้ 6-0 จากนั้นไม่นานในวันคริสต์มาสปีเดียวกัน สโมสรได้เปลี่ยนชื่อเป็น <strong>Royal Arsenal</strong> และเปลี่ยนเป็น <strong>Woolwich Arsenal</strong> ในปี 1893 เมื่อก้าวเข้าสู่ระบบฟุตบอลอาชีพอย่างเต็มตัว</p>
+                    <div class="p-4 rounded-xl bg-slate-100 border-l-4 border-arsenal-red text-sm">
+                        <strong>เกร็ดสำคัญ:</strong> สีเสื้อแดงเลือดหมูชุดแรกของสโมสรได้รับบริจาคมาจากอดีตนักเตะน็อตติงแฮม ฟอเรสต์ ที่ย้ายมาทำงานในโรงงานที่วูลวิช ซึ่งเป็นต้นกำเนิดของเสื้อสีแดงอันเป็นเอกลักษณ์มาจนถึงปัจจุบัน
+                    </div>
+                `
+            },
+            era2: {
+                badge: "ค.ศ. 1913 - 1939",
+                title: "การย้ายสู่ไฮบิวรี และยุคปฏิวัติของ เฮอร์เบิร์ต แชปแมน",
+                content: `
+                    <p>ในปี ค.ศ. 1913 เซอร์ เฮนรี นอร์ริส ประธานสโมสรตัดสินใจย้ายรังเหย้าข้ามแม่น้ำเทมส์มายัง <strong>สนามไฮบิวรี (Highbury)</strong> ทางตอนเหนือของกรุงลอนดอน เพื่อขยายฐานแฟนบอล และตัดคำว่า Woolwich ออกจากชื่อ เหลือเพียง <strong>"The Arsenal"</strong> และ <strong>"Arsenal"</strong></p>
+                    <p>จุดเปลี่ยนสำคัญที่สุดเกิดขึ้นในปี 1925 เมื่อสโมสรแต่งตั้ง <strong>เฮอร์เบิร์ต แชปแมน (Herbert Chapman)</strong> เข้ามาเป็นผู้จัดการทีม แชปแมนได้ปฏิวัติวงการฟุตบอลอังกฤษด้วยแท็กติก <strong>WM Formation</strong> การฝึกซ้อมวิทยาศาสตร์การกีฬา การติดไฟส่องสว่างในสนาม รวมถึงการเพิ่ม <strong>"แขนเสื้อสีขาว"</strong> ลงบนเสื้อสีแดงเพื่อให้ผู้เล่นมองเห็นเพื่อนร่วมทีมได้ชัดเจนขึ้น</p>
+                    <p>ผลงานของแชปแมนและผู้สืบทอดอย่าง จอร์จ อัลลิสัน ทำให้อาร์เซนอลคว้าแชมป์ลีกสูงสุดได้ถึง <strong>5 สมัยในช่วงทศวรรษ 1930</strong> (1930-31, 1932-33, 1933-34, 1934-35, 1937-38)</p>
+                `
+            },
+            era3: {
+                badge: "ค.ศ. 1970 - 1995",
+                title: "ดับเบิลแชมป์ 1971 และค่ำคืนปาฏิหาริย์ที่แอนฟิลด์ 1989",
+                content: `
+                    <p>หลังจากห่างหายจากความสำเร็จไปนาน <strong>เบอร์ตี มี (Bertie Mee)</strong> อดีตนักกายภาพบำบัดของสโมสร ได้สร้างทีมพลังหนุ่มนำโดย ชาร์ลี จอร์จ, แฟรงก์ แม็คลินท็อค และ บ็อบ วิลสัน พาทีมคว้าแชมป์ยุโรปใบแรก (Inter-Cities Fairs Cup 1970) และสร้างประวัติศาสตร์คว้า <strong>ดับเบิลแชมป์ (ลีก + เอฟเอ คัพ) ครั้งแรกในฤดูกาล 1970-71</strong></p>
+                    <p>ต่อมาในยุคของกุนซือ <strong>จอร์จ เกรแฮม (George Graham)</strong> อาร์เซนอลสร้างแผงหลังระดับตำนาน "Famous Back Four" (โทนี่ อดัมส์, ลี ดิกซัน, ไนเจล วินเทอร์เบิร์น, สตีฟ โบลด์) และเกิดเหตุการณ์ <strong>"Anfield '89"</strong> ในนัดปิดฤดูกาล 1988-89 ที่อาร์เซนอลต้องบุกชนะลิเวอร์พูลด้วยผลต่าง 2 ประตูถึงจะคว้าแชมป์ และ <strong>ไมเคิล โธมัส</strong> ยิงประตูชัย 2-0 ในนาทีที่ 90+1 กระชากแชมป์ลีกกลับลอนดอนเหนือได้อย่างเหลือเชื่อ</p>
+                `
+            },
+            era4: {
+                badge: "ค.ศ. 1996 - 2018",
+                title: "ยุค อาร์แซน เวนเกอร์ และตำนานไร้พ่าย The Invincibles",
+                content: `
+                    <p>การมาถึงของ <strong>อาร์แซน เวนเกอร์ (Arsène Wenger)</strong> ในปี 1996 ได้เปลี่ยนโฉมหน้าฟุตบอลอังกฤษไปตลอดกาล เวนเกอร์นำระบบโภชนาการสมัยใหม่ การแมวมองระดับโลก และสไตล์ฟุตบอล "Wengerball" ที่ต่อบอลสวยงามรวดเร็วเข้ามาสู่ทีม</p>
+                    <p>เขาพาทีมคว้าดับเบิลแชมป์ถึง 2 ครั้ง (1997-98 และ 2001-02) ก่อนจะสร้างปรากฏการณ์ระดับโลกใน <strong>ฤดูกาล 2003-04</strong> นำทัพโดย เธียร์รี อองรี, เดนนิส เบิร์กแคมป์, ปาทริค วิเอรา, โรแบร์ ปิแรส และ โซล แคมป์เบลล์ ลงเล่น 38 นัดในพรีเมียร์ลีกโดย <strong>ไม่แพ้ทีมใดเลย (ชนะ 26 เสมอ 12)</strong></p>
+                    <div class="p-4 rounded-xl bg-amber-50 border-l-4 border-arsenal-gold text-sm text-slate-800">
+                        <strong>ถ้วยพรีเมียร์ลีกทองคำ:</strong> พรีเมียร์ลีกได้จัดทำถ้วยรางวัลสีทองพิเศษมอบให้อาร์เซนอลโดยเฉพาะ เพื่อสดุดีความสำเร็จไร้พ่าย 38 นัด และทีมยังยืดสถิติไม่แพ้ใครในลีกต่อเนื่องยาวนานถึง <strong>49 นัด</strong>
+                    </div>
+                `
+            },
+            era5: {
+                badge: "ค.ศ. 2006 - 2019",
+                title: "อำลาไฮบิวรี สู่รังเหย้าแห่งใหม่ เอมิเรตส์ สเตเดียม",
+                content: `
+                    <p>เพื่อรองรับการเติบโตของสโมสรในยุคสมัยใหม่ อาร์เซนอลได้ตัดสินใจสร้างสนามแห่งใหม่ในย่านแอชเบอร์ตัน โกรฟ ห่างจากสนามไฮบิวรีเดิมเพียงไม่กี่ร้อยเมตร และเปิดใช้งานอย่างเป็นทางการในเดือนกรกฎาคม ปี 2006 ในชื่อ <strong>เอมิเรตส์ สเตเดียม (Emirates Stadium)</strong> ความจุกว่า 60,000 ที่นั่ง</p>
+                    <p>แม้ในช่วง 10 ปีแรกของการย้ายสนาม สโมสรต้องรัดเข็มขัดทางการเงินเพื่อชำระหนี้ค่าก่อสร้างสนาม แต่ทีมยังสามารถผ่านเข้าไปเล่นในศึกยูฟ่า แชมเปียนส์ลีก ได้อย่างต่อเนื่อง และปลดล็อกคว้าแชมป์เอฟเอ คัพ เพิ่มได้อีก 3 สมัย (2014, 2015, 2017) ภายใต้การคุมทีมของ อาร์แซน เวนเกอร์</p>
+                `
+            },
+            era6: {
+                badge: "ค.ศ. 2019 - ปัจจุบัน",
+                title: "การฟื้นคืนชีพและอนาคตอันสดใสยุค มิเกล อาร์เตต้า",
+                content: `
+                    <p>ในเดือนธันวาคม 2019 <strong>มิเกล อาร์เตต้า (Mikel Arteta)</strong> อดีตกัปตันทีมอาร์เซนอล ได้รับการแต่งตั้งเป็นผู้จัดการทีม และประเดิมความสำเร็จทันทีด้วยการคว้าแชมป์ <strong>เอฟเอ คัพ สมัยที่ 14</strong> ในปี 2020</p>
+                    <p>อาร์เตต้าได้ผ่าตัดขุมกำลังครั้งใหญ่ ผสานผลผลิตจากอะคาเดมีอย่าง <strong>บูกาโย ซาก้า</strong> เข้ากับซูเปอร์สตาร์รุ่นใหม่อย่าง <strong>มาร์ติน โอเดการ์ด, เดแคลน ไรซ์, วิลเลียม ซาลิบา, กาเบรียล มากัลเญส และ ดาบิด รายา</strong> สร้างทีมที่แข็งแกร่งทั้งเกมรุกและเกมรับ กลับมายืนหยัดในฐานะทีมลุ้นแชมป์พรีเมียร์ลีกและยูฟ่า แชมเปียนส์ลีก อย่างเต็มภาคภูมิ</p>
+                `
+            }
+        };
+
+        const trophyDetails = {
+            league: {
+                badge: "แชมป์ลีกสูงสุด 13 สมัย",
+                title: "ทำเนียบแชมป์ลีกสูงสุดอังกฤษ (First Division & Premier League)",
+                content: `
+                    <p>อาร์เซนอลคว้าแชมป์ลีกสูงสุดของประเทศอังกฤษรวมทั้งหมด <strong>13 สมัย</strong> แบ่งเป็นยุค Football League First Division 10 สมัย และยุค Premier League 3 สมัย:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2">
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1930–31</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1932–33</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1933–34</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1934–35</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1937–38</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1947–48</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1952–53</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1970–71</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1988–89</span>
+                        <span class="px-3 py-2 rounded-lg bg-slate-100 font-semibold text-center text-slate-800">1990–91</span>
+                        <span class="px-3 py-2 rounded-lg bg-arsenal-red/10 border border-arsenal-red/30 font-bold text-center text-arsenal-red">1997–98 (EPL)</span>
+                        <span class="px-3 py-2 rounded-lg bg-arsenal-red/10 border border-arsenal-red/30 font-bold text-center text-arsenal-red">2001–02 (EPL)</span>
+                        <span class="px-3 py-2 rounded-lg bg-amber-100 border border-arsenal-gold font-extrabold text-center text-amber-900 col-span-2 sm:col-span-1">2003–04 (ไร้พ่าย)</span>
+                    </div>
+                `
+            },
+            facup: {
+                badge: "สถิติสูงสุดตลอดกาล 14 สมัย",
+                title: "ทำเนียบแชมป์เอฟเอ คัพ (FA Cup)",
+                content: `
+                    <p>อาร์เซนอลคือสโมสรที่ประสบความสำเร็จมากที่สุดในประวัติศาสตร์ฟุตบอลถ้วยที่เก่าแก่ที่สุดในโลก โดยคว้าแชมป์ไปครองถึง <strong>14 สมัย</strong>:</p>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-2 pt-2 text-center font-semibold text-xs sm:text-sm">
+                        <span class="p-2 rounded-lg bg-slate-100">1930</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1936</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1950</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1971</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1979</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1993</span>
+                        <span class="p-2 rounded-lg bg-slate-100">1998</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2002</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2003</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2005</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2014</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2015</span>
+                        <span class="p-2 rounded-lg bg-slate-100">2017</span>
+                        <span class="p-2 rounded-lg bg-arsenal-red text-white font-bold">2020</span>
+                    </div>
+                `
+            },
+            shield: {
+                badge: "17 สมัย",
+                title: "ทำเนียบแชมป์ เอฟเอ คอมมูนิตี้ ชิลด์ (FA Community Shield)",
+                content: `
+                    <p>อาร์เซนอลคว้าโล่เปิดฤดูกาลรวม <strong>17 สมัย</strong> (รวมแชมป์ร่วม 1 สมัยในปี 1991):</p>
+                    <p class="font-medium text-slate-800 bg-slate-100 p-4 rounded-xl leading-loose">
+                        1930, 1931, 1933, 1934, 1938, 1948, 1953, 1991 (แชมป์ร่วม), 1998, 1999, 2002, 2004, 2014, 2015, 2017, 2020 และ <strong>2023</strong> (ชนะจุดโทษ แมนเชสเตอร์ ซิตี้ 4-1 หลังเสมอในเวลา 1-1)
+                    </p>
+                `
+            },
+            leaguecup: {
+                badge: "2 สมัย",
+                title: "ทำเนียบแชมป์ ฟุตบอลลีก คัพ (League Cup)",
+                content: `
+                    <ul class="space-y-3">
+                        <li class="p-4 rounded-xl bg-slate-100">
+                            <strong class="text-arsenal-navy">ฤดูกาล 1986–87:</strong> เอาชนะ ลิเวอร์พูล 2-1 ในนัดชิงชนะเลิศที่สนามเวมบลีย์ จากการเหมาคนเดียว 2 ประตูของ ชาร์ลี นิโคลัส
+                        </li>
+                        <li class="p-4 rounded-xl bg-slate-100">
+                            <strong class="text-arsenal-navy">ฤดูกาล 1992–93:</strong> เอาชนะ เชฟฟิลด์ เว้นส์เดย์ 2-1 จากประตูของ พอล เมอร์สัน และ สตีฟ มอร์โรว์ สร้างประวัติศาสตร์เป็นทีมแรกในอังกฤษที่คว้าดับเบิลแชมป์บอลถ้วยในประเทศ (เอฟเอ คัพ + ลีกคัพ) ในปีเดียวกัน
+                        </li>
+                    </ul>
+                `
+            },
+            europe: {
+                badge: "แชมป์ยุโรป 1993-94",
+                title: "ยูโรเปียน คัพ วินเนอร์ส คัพ (European Cup Winners' Cup)",
+                content: `
+                    <p>ในฤดูกาล <strong>1993–94</strong> อาร์เซนอลภายใต้การคุมทีมของ จอร์จ เกรแฮม ทะลุเข้าสู่รอบชิงชนะเลิศพบกับ ปาร์มา ยอดทีมจากอิตาลี ณ สนามพาร์เคน สเตเดียม กรุงโคเปนเฮเกน ประเทศเดนมาร์ก</p>
+                    <p>อาร์เซนอลโชว์เกมรับอันแข็งแกร่งและได้ประตูชัยโทนจากการวอลเลย์สุดสวยของ <strong>อลัน สมิธ (Alan Smith)</strong> ในนาทีที่ 20 พาทีมชนะ 1-0 คว้าแชมป์ยุโรปสมัยที่สองของสโมสร</p>
+                `
+            },
+            fairs: {
+                badge: "แชมป์ยุโรปใบแรก 1969-70",
+                title: "อินเตอร์-ซิตีส์ แฟร์ส คัพ (Inter-Cities Fairs Cup)",
+                content: `
+                    <p>ความสำเร็จระดับทวีปยุโรปครั้งแรกของอาร์เซนอลเกิดขึ้นในฤดูกาล <strong>1969–70</strong> ในรอบชิงชนะเลิศนัดแรก อาร์เซนอลบุกไปแพ้ อันเดอร์เลชท์ ที่เบลเยียมก่อน 1-3</p>
+                    <p>แต่ในนัดที่สองที่สนามไฮบิวรี เมื่อวันที่ 28 เมษายน 1970 อาร์เซนอลพลิกนรกกลับมาเอาชนะได้ถึง <strong>3-0</strong> จากประตูของ เอ็ดดี เคลลี, จอห์น แรดฟอร์ด และ จอน แซมเมลส์ รวมผลสองนัดชนะ 4-3 คว้าแชมป์ยุโรปใบแรกในประวัติศาสตร์สโมสร</p>
+                `
+            }
+        };
+
+        // 4. Modal Controller Functions
+        const modal = document.getElementById('detail-modal');
+        const modalBadge = document.getElementById('modal-badge');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        function openModal(badge, title, htmlContent) {
+            modalBadge.textContent = badge;
+            modalTitle.textContent = title;
+            modalBody.innerHTML = htmlContent;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal when clicking backdrop or pressing Escape
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+
+        function openHistoryModal(eraKey) {
+            const data = historyDetails[eraKey];
+            if (data) openModal(data.badge, data.title, data.content);
+        }
+
+        function openTrophyModal(trophyKey) {
+            const data = trophyDetails[trophyKey];
+            if (data) openModal(data.badge, data.title, data.content);
+        }
+
+        function openPlayerModal(playerId) {
+            const player = playersData.find(p => p.id === playerId);
+            if (!player) return;
+
+            const statEntries = Object.entries(player.stats).map(([key, val]) => {
+                const labels = {
+                    apps: "ลงสนามรวม",
+                    cleanSheets: "คลีนชีต",
+                    goals: "ประตู",
+                    assists: "แอสซิสต์",
+                    passAcc: "ความแม่นยำส่งบอล",
+                    duelsWon: "ชนะการดวล",
+                    honours: "เกียรติประวัติเด่น"
+                };
+                return `
+                    <div class="p-3 rounded-xl bg-slate-100 border border-slate-200">
+                        <span class="text-xs text-slate-500 block">${labels[key] || key}</span>
+                        <span class="font-display font-bold text-base text-slate-900">${val}</span>
+                    </div>
+                `;
+            }).join('');
+
+            const content = `
+                <div class="flex flex-wrap items-center gap-3 pb-3 border-b border-slate-200">
+                    <span class="px-3 py-1 rounded-lg bg-arsenal-navy text-white font-bold text-xs">หมายเลขเสื้อ #${player.number}</span>
+                    <span class="px-3 py-1 rounded-lg bg-arsenal-red/10 text-arsenal-red font-bold text-xs">${player.posLabel}</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-100 text-slate-700 font-medium text-xs">สัญชาติ: ${player.nationality}</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-100 text-slate-700 font-medium text-xs">อายุ: ${player.age} ปี</span>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-slate-900 mb-1">จุดเด่นและบทบาทในทีม</h4>
+                    <p class="text-slate-600">${player.highlight}</p>
+                </div>
+                <div>
+                    <h4 class="font-display font-bold text-slate-900 mb-2">ข้อมูลและสถิติสำคัญกับอาร์เซนอล (ย้ายร่วมทีม: ${player.joined})</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        ${statEntries}
+                    </div>
+                </div>
+            `;
+
+            openModal(`${player.thaiName}`, `${player.name} (#${player.number})`, content);
+        }
+
+        // 5. Contact Form Submission Handler (No alert() used)
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('sender-name').value.trim();
+            const email = document.getElementById('sender-email').value.trim();
+            const message = document.getElementById('sender-message').value.trim();
+
+            formFeedback.classList.remove('hidden', 'bg-rose-50', 'text-rose-700', 'border-rose-200', 'bg-emerald-50', 'text-emerald-800', 'border-emerald-200', 'border');
+
+            if (!name || !email || !message) {
+                formFeedback.classList.add('bg-rose-50', 'text-rose-700', 'border', 'border-rose-200');
+                formFeedback.innerHTML = `<i class="fa-solid fa-circle-exclamation mr-2"></i> กรุณากรอกข้อมูลในช่องที่มีเครื่องหมาย (*) ให้ครบถ้วนก่อนส่งข้อความครับ`;
+                return;
+            }
+
+            // Success state
+            formFeedback.classList.add('bg-emerald-50', 'text-emerald-800', 'border', 'border-emerald-200');
+            formFeedback.innerHTML = `
+                <div class="flex items-start">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-2.5 mt-0.5"></i>
+                    <div>
+                        <strong>ส่งข้อความถึงผู้พัฒนาเรียบร้อยแล้ว!</strong>
+                        <p class="text-xs mt-1">ขอบคุณคุณ <strong>${name}</strong> ที่ร่วมส่งข้อเสนอแนะ ทีมพัฒนาจะตอบกลับไปยังอีเมล <strong>${email}</strong> โดยเร็วที่สุด (COYG!)</p>
+                    </div>
+                </div>
+            `;
+
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
